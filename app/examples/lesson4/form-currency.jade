@@ -1,0 +1,28 @@
+.currency-form
+  .row
+    .col-md-12
+      .controls.row
+        br
+
+        .col-md-9
+          .row
+            .col-md-6
+              input.form-control(type="text" ng-model="vm.usd" placeholder="USD")
+        .col-md-3
+          select.form-control(ng-change="vm.updateResult()" ng-model="vm.selected"
+          ng-options="rate.name for rate in vm.rates")
+            //- option(ng-repeat="rate in vm.rates" value="{{rate.value}}") {{rate.name}}
+  br
+  .row(ng-if="vm.usd && vm.selected")
+    .col-md-6
+      .alert.alert-info
+        button.close(type="button" data-dismiss="alert") &times;
+        div {{vm.usd}} EURO =  {{vm.selected.name}} {{(vm.usd*vm.selected.value).toFixed(2)}}
+  br
+  .row(ng-if="vm.usd && vm.selected")
+    .col-md-6
+      .alert.alert-success
+        button.close(type="button" data-dismiss="alert") &times;
+        strong {{(vm.usd*vm.selected.value).toFixed(2)}}
+
+

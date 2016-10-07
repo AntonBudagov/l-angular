@@ -1,0 +1,5 @@
+form
+  h1(ng-model="name") {{name}}
+  input(type="text" ng-model="name" ng-model-options="{ updateOn: 'blur' }")
+  input(ng-model="show" type="checkbox" ng-show="name.length")
+  p(ng-if="show") Hello, {{name}}

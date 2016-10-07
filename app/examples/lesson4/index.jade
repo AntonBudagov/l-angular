@@ -1,0 +1,28 @@
+extends ../../layouts/index.jade
+
+block head-title
+    | - home
+
+block styles
+    link(href="style.css", rel="stylesheet")
+    link(href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+
+block scripts
+    script(src='main.js')
+
+block content
+    .container(ng-app="myApp" )
+      .div(ng-controller="currencyController as vh")
+        //- input(ng-model="vh.admin.name")
+        //- my-form(user="vh.admin" age="17")
+        //- lable firstName
+        //- input(type="text" ng-model="vh.admin.firstName")
+        //- lable lastName
+        //- input(type="text" ng-model="vh.admin.lastName")
+        //- full-name(first-name="vh.admin.firstName" last-name="vh.admin.lastName")
+        call-container(call="vh.sayHello(name)")
+        call-container(call="vh.sayHello(name)")
+        call-container(call="vh.sayHello(name)")
+        call-container(call="vh.sayHello(name)")
+      //- .div(ng-controller="myCurrencyCtrl as vm")
+      //-   form-currency

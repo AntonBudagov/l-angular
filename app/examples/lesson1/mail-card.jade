@@ -1,0 +1,8 @@
+.col-md-6(ng-repeat="task in mailBox.user")
+  .panel.panel-success
+    .panel-heading
+      h3.panel-title(ng-click="showText=!showText") {{task.fullName}}
+    .panel-body(ng-show="showText")
+      p {{task.description}}
+    .panel-footer
+      button.btn.btn-success(ng-click="showText=!showText") More

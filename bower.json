@@ -1,0 +1,23 @@
+{
+  "name": "emptywebsite",
+  "description": "use this for development website",
+  "main": "index.js",
+  "authors": [
+    "Serokruluy"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "angular": "1.5.8",
+    "bootstrap": "3.3.7"
+  }
+}

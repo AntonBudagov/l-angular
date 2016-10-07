@@ -1,0 +1,42 @@
+extends ../../layouts/index.jade
+
+block head-title
+    | - Lesson 1
+
+block styles
+    link(href="style.css", rel="stylesheet")
+
+block scripts
+    script(src='main.js')
+
+block content
+
+    //- директивы
+    //- 1) <span my-dir="exp"</span>
+    //- 2) <my-dir></my-dir>
+    //- 3) <!-- directive: my-dir exp -->
+    //- 4) <span class="my-dir: exp;"</span>
+
+    //- ng-app
+    //- Директивы для работы с событиями
+    //- дирекивы стандартных атрибутов(ng-class, ng-href, ng-src)
+    //- почти любой html тег имеет свою директиву (a, form, input)
+    //- - директивы логики шабланизаторы (ng-if, ng-repeat,ng-show)
+    //- специальные директивы (ng-controller, ng-model, ng-track)
+
+    //- h2 lesson 1
+    //-   //- p {{1+2}}
+    //-   input(ng-model="name")
+    //-   button(ng-click="greeatingShow=true")
+    //-     | congrate
+    //-   div(ng-show="greeatingShow")
+    //-     | hello, {{name}}
+    .container(ng-app="myApp")
+        //- .row(ng-controller="UserController as userController")
+        .col-md-12
+          user-card
+
+        .row(ng-controller="MailBoxController as mailBox")
+            mail-card
+
+

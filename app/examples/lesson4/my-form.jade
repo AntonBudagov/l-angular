@@ -1,0 +1,27 @@
+{{currencyController.user.name}}
+//- .alert.alert-info {{fullNameCtrl.firstName | capitalize}} {{fullNameCtrl.lastName | capitalize}}
+//- .row
+//-   .col-md-10.col-md-offset-1
+//-     br
+//-     p
+//-       b Base Currency:
+//-       br
+//-       select.form-control(ng-model="vh.selected"
+//-       ng-options="rate.name for rate in vh.rates")
+//-     p
+//-       br
+//-       lable Amount:
+//-       input.form-control(type="text" ng-model="vh.amount")
+//-     br
+//-     lable Search
+//-     input.form-control(type="search")
+//-     br
+//- h1 {{vh.amount}} in {{vh.selected.name}}
+//- .row
+//-   table.table.table-bordered.table-striped
+//-     tr
+//-       th Currency
+//-       th Amount
+//-     tr(ng-repeat="rate in vh.rates")
+//-       td.col-md-5{{rate.name}}
+//-       td.col-md-5{{((rate.value/vh.selected.value)*vh.amount).toFixed(2)}}

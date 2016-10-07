@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+  head
+    //- base(target="_blank")
+    meta(charset="utf-8")
+    title Index
+    link(href="/css/build.min.css", rel="stylesheet")
+
+  body
+
+    - var listOfExamples = [];
+    - listOfExamples.push({title: 'lesson 1', link: '/examples/lesson1/'})
+    - listOfExamples.push({title: 'lesson 2', link: '/examples/lesson2/'})
+    - listOfExamples.push({title: 'lesson 3', link: '/examples/lesson3/'})
+    - listOfExamples.push({title: 'lesson 4', link: '/examples/lesson4/'})
+
+
+
+    ul.listOfExamples
+      each item in listOfExamples
+        li.listOfExamples__item
+          a.listOfExamples__link(href=item.link)!= item.title
+
+    footer.footer

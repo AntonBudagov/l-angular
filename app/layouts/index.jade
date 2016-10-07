@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+  head
+    //- base(href="/")
+
+
+    meta(charset="utf-8")
+    meta(name="viewport" id="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=no")
+    title
+      | Name Project
+      block head-title
+
+    link(href="../../lib/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+    link(href="../../lib/bootstrap/dist/css/bootstrap-theme.min.css", rel="stylesheet")
+
+
+    link(href="../../css/main.css", rel="stylesheet")
+    //- prodaction
+    //- link(href="css/all.css", rel="stylesheet")
+    block styles
+
+
+  body
+    block content
+    script(src='../../lib/angular/angular.js')
+    script(src='../../lib/jquery/dist/jquery.min.js')
+    script(src='../../js/base.js')
+    //- prodaction
+    //- script(src='js/all.js')
+    block scripts
