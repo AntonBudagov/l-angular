@@ -1,0 +1,22 @@
+.panel.panel-info
+  .panel-heading
+    h3.panel-title {{user.fullName}}
+  .panel-body
+    avatar(user="user")
+    .col-md-9.col-lg-9
+      table.table.table-user-information
+        tbody
+          tr
+            td date birth
+            td {{user.birthdate}}
+          tr
+            td gender
+            td {{user.gender}}
+          tr
+            td Adreess
+            td {{user.address}}
+          tr
+            td email
+            td
+              a(href="mailto:{{user.email}}") {{user.email}}
+  .panel-footer

@@ -6,9 +6,9 @@ var app = angular.module('myApp', []);
 app.directive('callContainer', function () {
     return {
         scope: {
-          user: '=',
+          user: '=', //двунаправленый
           age: '@',
-          call: '&'
+          call: '&' // изалированый скоуп
         },
         restrict: 'E',
         // templateUrl: 'my-form.html',
@@ -67,7 +67,7 @@ app.controller('currencyController', function(serviceRate) {
   vh.admin = {
     name: 'Anton',
     age: 25
-  };
+  }
 
   vh.sayHello = function(name){
     console.log('work')

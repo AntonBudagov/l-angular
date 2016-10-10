@@ -1,0 +1,29 @@
+extends ../../layouts/index.jade
+
+block head-title
+    | - lesson5
+
+block styles
+    link(href='http://fonts.googleapis.com/css?family=Marck+Script&subset=latin,cyrillic' rel='stylesheet' type='text/css')
+
+block scripts
+    //- script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-mocks.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/restangular/1.5.1/restangular.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js')
+    script(src='users.mock.js')
+    script.
+      'use strict'
+      const app = angular.module('myApp', ['ngMockE2E', 'restangular', 'ui.router']);
+    script(src="router-config.js")
+    script(src='main.js')
+
+block content
+    .container(ng-app="myApp" ng-controller="UserController as userController")
+      input(type="text" ng-model="userController.user" user-validation)
+      .row
+        .col-md-6
+          ui-view
+          //- user-card(ng-repeat='user in userController.users', user='user')
+
